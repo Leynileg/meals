@@ -7,7 +7,7 @@ import debounce from "lodash.debounce";
 
 import {
   MealDetailsRoute,
-  MealDetailsNavigation,
+  MealDetailsNavigation
 } from "@typings/navigation.stack";
 
 import { theme } from "@consts/theme";
@@ -17,7 +17,7 @@ import {
   addFavorite,
   fetchFavorites,
   getFavoritesIds,
-  removeFavorite,
+  removeFavorite
 } from "@store/favorites";
 import { getMeal } from "@store/meals";
 
@@ -59,7 +59,7 @@ const MealDetails: React.FC = () => {
           color={theme.colors.light}
           onPress={handleStarPress}
         />
-      ),
+      )
     });
   }, [navigation, isMealFavorite]);
 
@@ -95,24 +95,24 @@ const styles = StyleSheet.create({
     width: "100%",
     height: 350,
     borderBottomRightRadius: 32,
-    borderBottomLeftRadius: 32,
+    borderBottomLeftRadius: 32
   },
   title: {
     fontWeight: "bold",
     fontSize: 24,
     margin: 8,
     textAlign: "center",
-    color: theme.colors.dark,
+    color: theme.colors.dark
   },
   detailsText: {
-    color: theme.colors.dark,
+    color: theme.colors.dark
   },
   outerListContainer: {
     alignItems: "center",
     justifyContent: "center",
-    marginBottom: 32,
+    marginBottom: 32
   },
   listContainer: {
-    width: "80%",
-  },
+    width: "80%"
+  }
 });
