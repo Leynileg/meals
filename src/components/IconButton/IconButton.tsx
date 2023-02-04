@@ -23,7 +23,7 @@ const IconButton: React.FC<Props> = props => {
 export { IconButton };
 
 const Button = styled.Pressable`
-  padding: ${props => props.theme.margins.base};
+  padding: ${props => props.theme.margins.half};
 `;
 
 const styles = StyleSheet.create({
