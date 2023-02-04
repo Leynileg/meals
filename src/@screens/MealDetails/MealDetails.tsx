@@ -19,7 +19,7 @@ import {
   getFavoritesIds,
   removeFavorite
 } from "@store/favorites";
-import { getMeal } from "@store/meals";
+import { getMealById } from "@store/meals";
 
 import { MealBaseInfo } from "@components/MealBaseInfo";
 import { Subtitle, List } from "@components/MealDetails";
@@ -32,7 +32,7 @@ const MealDetails: React.FC = () => {
 
   const { mealId } = route.params;
 
-  const selectedMeal = useAppSelector(store => getMeal(store, mealId));
+  const selectedMeal = useAppSelector(store => getMealById(store, mealId));
   const userFavoritesIds = useAppSelector(getFavoritesIds);
 
   const isMealFavorite = userFavoritesIds.includes(mealId);
