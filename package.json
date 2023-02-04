@@ -15,7 +15,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn run ts:check"
+      "pre-commit": "yarn ts:check"
     }
   },
   "dependencies": {
