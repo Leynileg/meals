@@ -1,6 +1,7 @@
 import React from "react";
-import { FlatList, StyleSheet, View } from "react-native";
+import { FlatList } from "react-native";
 import { useNavigation, useRoute } from "@react-navigation/native";
+import styled from "styled-components/native";
 
 import {
   MealsOverviewNavigation,
@@ -45,7 +46,7 @@ const MealsOverview: React.FC = () => {
   }
 
   return (
-    <View style={styles.container}>
+    <Container>
       <FlatList
         data={mealsList}
         keyExtractor={item => item.id}
@@ -60,15 +61,13 @@ const MealsOverview: React.FC = () => {
           />
         )}
       />
-    </View>
+    </Container>
   );
 };
 
 export { MealsOverview };
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    paddingTop: 16,
-  },
-});
+const Container = styled.View`
+  flex: 1;
+  padding-top: ${props => props.theme.margins.base_x2};
+`

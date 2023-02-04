@@ -1,7 +1,8 @@
-import { theme } from "@consts/theme";
-import { Meal } from "@typings/meals";
 import React from "react";
-import { StyleSheet, Text, TextStyle, View, ViewStyle } from "react-native";
+import { TextStyle, ViewStyle } from "react-native";
+import styled from "styled-components/native";
+
+import { Meal } from "@typings/meals";
 
 type PropsFromMeal = Pick<Meal, "duration" | "complexity" | "affordability">;
 
@@ -12,33 +13,30 @@ interface Props extends PropsFromMeal {
 
 const MealBaseInfo: React.FC<Props> = props => {
   return (
-    <View style={[styles.details, props.style]}>
-      <Text style={[styles.detailsItem, props.textStyle]}>
-        {props.duration}m
-      </Text>
-      <Text style={[styles.detailsItem, props.textStyle]}>
+    <Details style={[props.style]}>
+      <DetailsItem style={[props.textStyle]}>{props.duration}m</DetailsItem>
+      <DetailsItem style={[props.textStyle]}>
         {props.complexity.toUpperCase()}
-      </Text>
-      <Text style={[styles.detailsItem, props.textStyle]}>
+      </DetailsItem>
+      <DetailsItem style={[props.textStyle]}>
         {props.affordability.toUpperCase()}
-      </Text>
-    </View>
+      </DetailsItem>
+    </Details>
   );
 };
 
 export { MealBaseInfo };
 
-const styles = StyleSheet.create({
-  details: {
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "center",
-    padding: 8,
-  },
-  detailsItem: {
-    marginHorizontal: 12,
-    marginBottom: 8,
-    fontSize: 12,
-    color: theme.colors.orange,
-  },
-});
+const Details = styled.View`
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: ${props => props.theme.margins.base};
+`;
+
+const DetailsItem = styled.Text`
+  margin: ${props =>
+    `0 ${props.theme.margins.base} ${props.theme.margins.base}`};
+  font-size: ${props => props.theme.fonts.sizes.base};
+  color: ${props => props.theme.colors.orange};
+`;

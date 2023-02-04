@@ -15,10 +15,11 @@ module.exports = function(api) {
             "@store": "./src/store",
             "@services": "./src/services",
             "@controllers": "./controllers",
-          },
-        },
-      ],
+            theme: "./src/theme"
+          }
+        }
+      ]
       // "react-native-reanimated/plugin", // REQUIRED FOR DRAWER
-    ],
+    ]
   };
 };

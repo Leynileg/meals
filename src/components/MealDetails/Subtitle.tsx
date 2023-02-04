@@ -1,6 +1,7 @@
-import { theme } from "@consts/theme";
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import styled from "styled-components/native";
+
+import { dp } from "@services/Dp";
 
 interface Props {
   children: React.ReactNode;
@@ -8,26 +9,25 @@ interface Props {
 
 const Subtitle: React.FC<Props> = props => {
   return (
-    <View style={styles.subTitleContainer}>
-      <Text style={styles.subTitle}>{props.children}</Text>
-    </View>
+    <SubtitleContainer>
+      <SubTitleText>{props.children}</SubTitleText>
+    </SubtitleContainer>
   );
 };
 
 export { Subtitle };
 
-const styles = StyleSheet.create({
-  subTitleContainer: {
-    marginVertical: 8,
-    marginHorizontal: 24,
-    padding: 6,
-    borderBottomColor: theme.colors.orange,
-    borderBottomWidth: 2,
-  },
-  subTitle: {
-    fontWeight: "bold",
-    fontSize: 18,
-    color: theme.colors.orange,
-    textAlign: "center",
-  },
-});
+const SubtitleContainer = styled.View`
+  margin-horizontal: ${props => props.theme.margins.base};
+  margin-vertical: ${props => props.theme.margins.base_x2};
+  padding: ${props => props.theme.margins.half};
+  border-bottom-color: ${props => props.theme.colors.orange};
+  border-bottom-width: ${dp(1)};
+`;
+
+const SubTitleText = styled.Text`
+  font-size: ${props => props.theme.fonts.sizes.base};
+  font-weight: ${props => props.theme.fonts.weights.bold};
+  color: ${props => props.theme.colors.orange};
+  text-align: center;
+`;

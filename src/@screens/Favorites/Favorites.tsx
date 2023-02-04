@@ -1,11 +1,11 @@
 import React from "react";
-import { FlatList, StyleSheet, Text, View } from "react-native";
+import { FlatList, Text } from "react-native";
 import { useNavigation } from "@react-navigation/native";
+import styled from "styled-components/native";
 
 import { MealsOverviewNavigation } from "@typings/navigation.stack";
 
 import { STACK_SCREEN_NAME } from "@consts/navigation";
-import { theme } from "@consts/theme";
 
 import { MealTile } from "@components/MealTile";
 
@@ -20,14 +20,14 @@ const Favorites: React.FC = () => {
   // so there's no need for a loading screen here
   if (!favoriteMeals.length) {
     return (
-      <View style={styles.root}>
+      <Container>
         <Text>It's empty ¯\_(ツ)_/¯</Text>
-      </View>
+      </Container>
     );
   }
 
   return (
-    <View style={styles.root}>
+    <Container>
       <FlatList
         style={{ width: "100%" }}
         data={favoriteMeals}
@@ -37,23 +37,21 @@ const Favorites: React.FC = () => {
             {...item}
             onPress={() =>
               navigation.push(STACK_SCREEN_NAME.MEAL_DETAILS, {
-                mealId: item.id,
+                mealId: item.id
               })
             }
           />
         )}
       />
-    </View>
+    </Container>
   );
 };
 
 export { Favorites };
 
-const styles = StyleSheet.create({
-  root: {
-    flex: 1,
-    alignItems: "center",
-    justifyContent: "center",
-    paddingTop: theme.margins.base_x3,
-  },
-});
+const Container = styled.View`
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  padding-top: ${props => props.theme.margins.base_x3};
+`;

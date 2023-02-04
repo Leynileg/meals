@@ -1,6 +1,6 @@
-import { theme } from "@consts/theme";
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { View } from "react-native";
+import styled from "styled-components/native";
 
 interface Props {
   data: string[];
@@ -10,9 +10,9 @@ const List: React.FC<Props> = props => {
   return (
     <View>
       {props.data.map(item => (
-        <View style={styles.listItem} key={item}>
-          <Text style={styles.itemText}>{item}</Text>
-        </View>
+        <ListItem key={item}>
+          <ItemText>{item}</ItemText>
+        </ListItem>
       ))}
     </View>
   );
@@ -20,17 +20,15 @@ const List: React.FC<Props> = props => {
 
 export { List };
 
-const styles = StyleSheet.create({
-  listItem: {
-    borderRadius: 6,
-    paddingHorizontal: 8,
-    paddingVertical: 4,
-    marginVertical: 4,
-    marginHorizontal: 12,
-    backgroundColor: theme.colors.yellow,
-  },
-  itemText: {
-    color: theme.colors.dark,
-    textAlign: "center",
-  },
-});
+const ListItem = styled.View`
+  border-radius: ${props => props.theme.borders.radius.base};
+  padding: ${props =>
+    `${props.theme.margins.half} ${props.theme.margins.base}`};
+  margin: ${props => `${props.theme.margins.half} ${props.theme.margins.base}`};
+  background-color: ${props => props.theme.colors.yellow};
+`;
+
+const ItemText = styled.Text`
+  text-align: center;
+  color: ${props => props.theme.colors.dark};
+`;

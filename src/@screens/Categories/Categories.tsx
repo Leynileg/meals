@@ -1,6 +1,7 @@
-import { StyleSheet, View, FlatList, Platform } from "react-native";
+import { FlatList, Platform } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import React from "react";
+import styled from "styled-components/native";
 
 import { Category } from "@typings/categories";
 import { CategoriesNavigation } from "@typings/navigation.stack";
@@ -13,7 +14,6 @@ import { useAppDispatch, useAppSelector } from "@store/hooks";
 import { fetchCategories, getCategories } from "@store/categories";
 
 import { Loading } from "@components/Loading";
-import { theme } from "@consts/theme";
 
 const Categories: React.FC = () => {
   const navigation = useNavigation<CategoriesNavigation>();
@@ -32,7 +32,7 @@ const Categories: React.FC = () => {
   }
 
   return (
-    <View style={styles.root}>
+    <Container>
       <FlatList
         data={categories}
         numColumns={2}
@@ -44,21 +44,20 @@ const Categories: React.FC = () => {
             title={item.title}
             onPress={() =>
               navigation.navigate(STACK_SCREEN_NAME.MEALS_OVERVIEW, {
-                categoryId: item.id,
+                categoryId: item.id
               })
             }
           />
         )}
       />
-    </View>
+    </Container>
   );
 };
 
 export { Categories };
 
-const styles = StyleSheet.create({
-  root: {
-    flex: 1,
-    paddingTop: Platform.OS === "android" ? theme.margins.base_x3 : 0,
-  },
-});
+const Container = styled.View`
+  flex: 1;
+  padding-top: ${props =>
+    Platform.OS === "android" ? props.theme.margins.base_x3 : 0};
+`;

@@ -1,6 +1,7 @@
 import React from "react";
-import { Pressable, StyleSheet, Text, View } from "react-native";
 import { AntDesign } from "@expo/vector-icons";
+import { StyleSheet } from "react-native";
+import styled from "styled-components/native";
 
 interface Props {
   icon: keyof typeof AntDesign.glyphMap;
@@ -10,22 +11,23 @@ interface Props {
 
 const IconButton: React.FC<Props> = props => {
   return (
-    <Pressable
+    <Button
       onPress={props.onPress}
-      style={({ pressed }) => [styles.button, pressed ? styles.pressed : null]}
+      style={({ pressed }) => pressed && styles.pressed}
     >
       <AntDesign name={props.icon} size={24} color={props.color} />
-    </Pressable>
+    </Button>
   );
 };
 
 export { IconButton };
 
+const Button = styled.Pressable`
+  padding: ${props => props.theme.margins.base};
+`;
+
 const styles = StyleSheet.create({
-  button: {
-    padding: 8,
-  },
   pressed: {
-    opacity: 0.75,
-  },
+    opacity: 0.75
+  }
 });

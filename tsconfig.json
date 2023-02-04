@@ -3,7 +3,7 @@
   "compilerOptions": {
     "target": "esnext",
     "module": "esnext",
-    "types": ["react-native", "jest"],
+    "types": ["react-native", "jest", "styled-components-react-native"],
     "lib": ["ESNext"],
     "allowJs": true,
     "jsx": "react-native",
@@ -26,9 +26,11 @@
       "@consts/*": ["./src/consts/*"],
       "@store/*": ["./src/store/*"],
       "@services/*": ["./src/services/*"],
-      "@controllers/*": ["./controllers/*"]
+      "@controllers/*": ["./controllers/*"],
+      "theme/*": ["./src/theme/*"]
     }
   },
+  "include": ["./src/**/*"],
   "exclude": [
     "node_modules",
     "babel.config.js",
