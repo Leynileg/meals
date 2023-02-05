@@ -9,11 +9,10 @@ import { CategoriesNavigation } from "@typings/navigation.stack";
 import { STACK_SCREEN_NAME } from "@consts/navigation";
 
 import { CategoryTile } from "@components/CategoryTile";
+import { Loading } from "@components/Loading";
 
 import { useAppDispatch, useAppSelector } from "@store/hooks";
 import { fetchCategories, getCategories } from "@store/categories";
-
-import { Loading } from "@components/Loading";
 
 interface ListItem {
   item: Category;

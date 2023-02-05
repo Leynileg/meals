@@ -6,6 +6,7 @@ import { ThemeProvider } from "styled-components/native";
 import { store } from "./src/store/store";
 import { Navigation } from "./src/navigation";
 import { theme } from "./src/theme/theme";
+import "./src/i18n/i18n";
 
 export default function App() {
   return (

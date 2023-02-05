@@ -15,7 +15,8 @@ module.exports = function(api) {
             "@store": "./src/store",
             "@services": "./src/services",
             "@controllers": "./controllers",
-            theme: "./src/theme"
+            theme: "./src/theme",
+            i18n: "./src/i18n"
           }
         }
       ]

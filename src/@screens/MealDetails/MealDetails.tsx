@@ -5,6 +5,7 @@ import Toast from "react-native-root-toast";
 import { RootSiblingParent } from "react-native-root-siblings";
 import debounce from "lodash.debounce";
 import { useTheme } from "styled-components/native";
+import { useTranslation } from "react-i18next";
 
 import {
   MealDetailsRoute,
@@ -36,6 +37,7 @@ const MealDetails: React.FC = () => {
   const navigation = useNavigation<MealDetailsNavigation>();
   const dispatch = useAppDispatch();
   const theme = useTheme();
+  const { t } = useTranslation("meal_details");
 
   const { mealId } = route.params;
 
@@ -82,9 +84,9 @@ const MealDetails: React.FC = () => {
         />
         <OuterListContainer>
           <ListContainer>
-            <Subtitle>Ingredients</Subtitle>
+            <Subtitle>{t("ingredients")}</Subtitle>
             <List data={selectedMeal.ingredients} />
-            <Subtitle>Steps</Subtitle>
+            <Subtitle>{t("steps")}</Subtitle>
             <List data={selectedMeal.steps} />
           </ListContainer>
         </OuterListContainer>

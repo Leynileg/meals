@@ -1,7 +1,8 @@
 import React from "react";
-import { FlatList, Text } from "react-native";
+import { FlatList, StyleSheet } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import styled from "styled-components/native";
+import { useTranslation } from "react-i18next";
 
 import { MealsOverviewNavigation } from "@typings/navigation.stack";
 
@@ -15,13 +16,14 @@ import { useAppSelector } from "@store/hooks";
 const Favorites: React.FC = () => {
   const navigation = useNavigation<MealsOverviewNavigation>();
   const favoriteMeals = useAppSelector(getFavorites);
+  const { t } = useTranslation("favorites");
 
   // it's impossible to have mealsIdsList without mealsList
   // so there's no need for a loading screen here
   if (!favoriteMeals.length) {
     return (
       <Container>
-        <Text>It's empty ¯\_(ツ)_/¯</Text>
+        <EmptyText>{t("favorites_empty_title")}</EmptyText>
       </Container>
     );
   }
@@ -29,13 +31,10 @@ const Favorites: React.FC = () => {
   return (
     <Container>
       <FlatList
-        ListHeaderComponentStyle={{ elevation: 0.1, zIndex: 1 }}
-        style={{ width: "100%" }}
+        style={styles.flatList}
         data={favoriteMeals}
         extraData={favoriteMeals}
         keyExtractor={item => item.id}
-        numColumns={1}
-        ItemSeparatorComponent={() => <Divider />}
         renderItem={({ item }) => (
           <MealTile
             {...item}
@@ -60,6 +59,12 @@ const Container = styled.View`
   padding-top: ${props => props.theme.margins.base_x3};
 `;
 
-const Divider = styled.View`
-  height: 10px;
+const EmptyText = styled.Text`
+  font-size: ${props => props.theme.fonts.sizes.lg};
 `;
+
+const styles = StyleSheet.create({
+  flatList: {
+    width: "100%"
+  }
+});

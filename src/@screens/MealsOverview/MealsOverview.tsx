@@ -5,7 +5,7 @@ import styled from "styled-components/native";
 
 import {
   MealsOverviewNavigation,
-  MealsOverviewRoute,
+  MealsOverviewRoute
 } from "@typings/navigation.stack";
 
 import { MealTile } from "@components/MealTile";
@@ -25,10 +25,10 @@ const MealsOverview: React.FC = () => {
   const categoryId = route.params.categoryId;
 
   const mealsList = useAppSelector(store =>
-    getCategoryMeals(store, categoryId),
+    getCategoryMeals(store, categoryId)
   );
   const selectedCategory = useAppSelector(store =>
-    getCategoryById(store, categoryId),
+    getCategoryById(store, categoryId)
   );
 
   React.useEffect(() => {
@@ -55,7 +55,7 @@ const MealsOverview: React.FC = () => {
             {...item}
             onPress={() =>
               navigation.push(STACK_SCREEN_NAME.MEAL_DETAILS, {
-                mealId: item.id,
+                mealId: item.id
               })
             }
           />
@@ -70,4 +70,4 @@ export { MealsOverview };
 const Container = styled.View`
   flex: 1;
   padding-top: ${props => props.theme.margins.base_x2};
-`
+`;
