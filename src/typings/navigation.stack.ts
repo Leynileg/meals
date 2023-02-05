@@ -1,7 +1,7 @@
 import type { RouteProp } from "@react-navigation/native";
-import type { NativeStackNavigationProp,  } from "@react-navigation/native-stack";
+import type { NativeStackNavigationProp } from "@react-navigation/native-stack";
 
-import { STACK_SCREEN_NAME } from "@consts/navigation";
+import { STACK_SCREEN_NAME } from "consts/navigation";
 
 type RootStackParamList = {
   [STACK_SCREEN_NAME.MEALS_CATEGORIES]: undefined;

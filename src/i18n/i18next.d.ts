@@ -1,7 +1,7 @@
 import { translations } from "./locales";
 
 const {
-  en: { favorites, meal_details, generic }
+  en: { favorites, meal_details, generic },
 } = translations;
 
 type Domains = keyof typeof translations.en;
@@ -18,10 +18,10 @@ type FullPaths = FavoriteFullPaths | MealDetailsFullPaths | GenericFullPaths;
 
 type DomainWithPaths = {
   [key in FullPaths]: string;
-}
+};
 
 type AllDomainsWithFullPaths = {
-  [domain in Domains]: DomainWithPaths
+  [domain in Domains]: DomainWithPaths;
 };
 
 type Resources = typeof translations.en & AllDomainsWithFullPaths;
@@ -34,4 +34,3 @@ declare module "i18next" {
     returnNull: false;
   }
 }
-

@@ -1,4 +1,4 @@
-import { store } from "@store/store";
+import { store } from "store/store";
 import {
   initialState,
   addFavorite,
@@ -7,7 +7,7 @@ import {
   getFavoritesIds,
   fetchFavorites,
   resetState,
-} from "@store/favorites";
+} from "store/favorites";
 
 import { MEALS } from "@data/dummy-data";
 

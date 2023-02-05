@@ -16,6 +16,6 @@ i18n.use(initReactI18next).init({
   cleanCode: true,
   returnNull: false,
   interpolation: {
-    escapeValue: false
-  }
+    escapeValue: false,
+  },
 });

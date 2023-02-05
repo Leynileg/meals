@@ -6,8 +6,8 @@ const translations = {
   en: {
     favorites: en_favorites,
     meal_details: en_meal_details,
-    generic: en_generic
-  }
+    generic: en_generic,
+  },
 };
 
 export { translations };

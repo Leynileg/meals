@@ -1,13 +1,13 @@
 import { useTheme } from "styled-components/native";
 
-import { Category } from "@typings/categories";
+import { Category } from "typings/categories";
 
 import {
   Button,
   Container,
   InnerContainer,
   styles,
-  Title
+  Title,
 } from "./CategoryTile.styles";
 
 interface Props extends Category {

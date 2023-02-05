@@ -1,5 +1,6 @@
-import { REDUX_SLICE } from "@consts/reduxSlices";
-import { store } from "@store/store";
+import { REDUX_SLICE } from "consts/reduxSlices";
+
+import { store } from "store/store";
 
 describe("redux `reducers` tests", () => {
   const reducerKeys = Object.keys(store.getState());

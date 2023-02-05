@@ -1,6 +1,6 @@
 import { CATEGORIES } from "@data/dummy-data";
-import { getRandomNumber } from "@services/GetRandomNumber";
-import { Category } from "@typings/categories";
+import { getRandomNumber } from "services/GetRandomNumber";
+import { Category } from "typings/categories";
 
 type Result = Promise<{
   data: Category[];

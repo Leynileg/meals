@@ -1,4 +1,4 @@
-import { Category as CategoryInterface } from "@typings/categories";
+import { Category as CategoryInterface } from "typings/categories";
 
 class Category implements CategoryInterface {
   id: string;

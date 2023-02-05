@@ -1,6 +1,6 @@
 import { combineReducers } from "@reduxjs/toolkit";
 
-import { REDUX_SLICE } from "@consts/reduxSlices";
+import { REDUX_SLICE } from "consts/reduxSlices";
 
 import { favoritesSlice } from "./favorites";
 import { categoriesSlice } from "./categories";

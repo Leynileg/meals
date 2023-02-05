@@ -2,7 +2,7 @@ import React from "react";
 import { ViewStyle } from "react-native";
 import styled from "styled-components/native";
 
-import { Meal } from "@typings/meals";
+import { Meal } from "typings/meals";
 import { useTranslation } from "react-i18next";
 
 type PropsFromMeal = Pick<Meal, "duration" | "complexity" | "affordability">;
@@ -19,7 +19,7 @@ const MealBaseInfo: React.FC<Props> = props => {
       <DetailsItem>
         {t("of_minutes", {
           amount: props.duration,
-          defaultValue: "generic.of_minutes"
+          defaultValue: "generic.of_minutes",
         })}
       </DetailsItem>
       <DetailsItem>{props.complexity.toUpperCase()}</DetailsItem>

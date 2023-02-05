@@ -11,7 +11,8 @@
     "ios": "expo start --ios",
     "web": "expo start --web",
     "test:unit": "jest",
-    "ts:check": "tsc"
+    "ts:check": "tsc",
+    "prettier": "prettier --write ./src/**/*"
   },
   "husky": {
     "hooks": {

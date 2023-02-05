@@ -2,10 +2,10 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { useTheme } from "styled-components/native";
 
-import { RootStackParamList } from "@typings/navigation.stack";
+import { RootStackParamList } from "typings/navigation.stack";
 
 import { STACK_SCREEN_NAME } from "../consts";
-import { MealDetails, MealsOverview } from "../@screens";
+import { MealDetails, MealsOverview } from "../screens";
 import { BottomTabNavigator } from "./BottomTab";
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
@@ -15,12 +15,12 @@ const Navigation: React.FC = () => {
 
   const navigatorStyling = {
     headerStyle: {
-      backgroundColor: theme.colors.light
+      backgroundColor: theme.colors.light,
     },
     contentStyle: {
       backgroundColor: theme.colors.light,
-      padding: 0
-    }
+      padding: 0,
+    },
   };
 
   return (
@@ -30,7 +30,7 @@ const Navigation: React.FC = () => {
           name={STACK_SCREEN_NAME.MEALS_CATEGORIES}
           component={BottomTabNavigator}
           options={{
-            headerShown: false
+            headerShown: false,
           }}
         />
         <Stack.Screen
@@ -39,8 +39,8 @@ const Navigation: React.FC = () => {
           options={{
             contentStyle: {
               padding: 0,
-              margin: 0
-            }
+              margin: 0,
+            },
           }}
         />
         <Stack.Screen
@@ -48,7 +48,7 @@ const Navigation: React.FC = () => {
           component={MealDetails}
           options={{
             presentation: "modal",
-            headerTintColor: theme.colors.dark
+            headerTintColor: theme.colors.dark,
           }}
         />
       </Stack.Navigator>

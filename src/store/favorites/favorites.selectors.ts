@@ -1,4 +1,4 @@
-import { RootState } from "@typings/redux";
+import { RootState } from "typings/redux";
 
 const getFavoritesIds = (state: RootState) => state.favorites.favoritesIdsList;
 

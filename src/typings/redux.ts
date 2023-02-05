@@ -1,5 +1,5 @@
-import { rootReducer } from "@store/reducers";
-import { store } from "@store/store";
+import { rootReducer } from "store/reducers";
+import { store } from "store/store";
 
 enum LOADING_STATE {
   IDLE = "IDLE",

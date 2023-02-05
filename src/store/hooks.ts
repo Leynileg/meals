@@ -1,6 +1,6 @@
 import { TypedUseSelectorHook, useDispatch, useSelector } from "react-redux";
 
-import { Dispatch, RootState } from "@typings/redux";
+import { Dispatch, RootState } from "typings/redux";
 
 const useAppDispatch: () => Dispatch = useDispatch;
 

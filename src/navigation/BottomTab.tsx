@@ -2,10 +2,10 @@ import { createMaterialBottomTabNavigator } from "@react-navigation/material-bot
 import { Feather } from "@expo/vector-icons";
 import { useTheme } from "styled-components/native";
 
-import { RootTabParamList } from "@typings/navigation.tab";
+import { RootTabParamList } from "typings/navigation.tab";
 
 import { TAB_SCREEN_NAME } from "../consts";
-import { Categories, Favorites } from "../@screens";
+import { Categories, Favorites } from "../screens";
 
 interface TabBarIconParams {
   color: string;
@@ -19,7 +19,7 @@ const BottomTabNavigator: React.FC = () => {
   return (
     <BottomTab.Navigator
       screenOptions={{
-        tabBarColor: theme.colors.light
+        tabBarColor: theme.colors.light,
       }}
       barStyle={{ backgroundColor: theme.colors.light }}
       style={{ padding: 0 }}
@@ -35,7 +35,7 @@ const BottomTabNavigator: React.FC = () => {
               color={color}
               size={theme.icons.sizes.base_x3}
             />
-          )
+          ),
         }}
       />
       <BottomTab.Screen
@@ -49,7 +49,7 @@ const BottomTabNavigator: React.FC = () => {
               color={color}
               size={theme.icons.sizes.base_x3}
             />
-          )
+          ),
         }}
       />
     </BottomTab.Navigator>

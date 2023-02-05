@@ -1,6 +1,6 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 
-import { Category } from "@typings/categories";
+import { Category } from "typings/categories";
 
 import { getCategoriesList } from "@controllers/categories";
 

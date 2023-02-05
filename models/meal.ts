@@ -1,4 +1,4 @@
-import { Meal as MealInterface } from "@typings/meals";
+import { Meal as MealInterface } from "typings/meals";
 
 class Meal implements MealInterface {
   id: string;

@@ -1,4 +1,4 @@
-import { store } from "@store/store";
+import { store } from "store/store";
 
 describe("redux `reducers` tests", () => {
   const storeKeys = Object.keys(store);

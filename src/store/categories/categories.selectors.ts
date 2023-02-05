@@ -1,4 +1,4 @@
-import { RootState } from "@typings/redux";
+import { RootState } from "typings/redux";
 
 const getCategories = (state: RootState) => state.categories.categoriesList;
 

@@ -1,4 +1,4 @@
-import { RootState } from "@typings/redux";
+import { RootState } from "typings/redux";
 
 const getCategoryMeals = (state: RootState, category: string) =>
   state.meals.mealsPerCategory[category] ?? [];

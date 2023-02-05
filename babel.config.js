@@ -7,20 +7,20 @@ module.exports = function(api) {
         "module-resolver",
         {
           alias: {
-            "@components": "./src/components",
             "@data": "./data",
-            "@screens": "./src/@screens",
-            "@typings": "./src/typings",
-            "@consts": "./src/consts",
-            "@store": "./src/store",
-            "@services": "./src/services",
             "@controllers": "./controllers",
+            components: "./src/components",
+            screens: "./src/screens",
+            typings: "./src/typings",
+            consts: "./src/consts",
+            store: "./src/store",
+            services: "./src/services",
             theme: "./src/theme",
-            i18n: "./src/i18n"
-          }
-        }
-      ]
+            i18n: "./src/i18n",
+          },
+        },
+      ],
       // "react-native-reanimated/plugin", // REQUIRED FOR DRAWER
-    ]
+    ],
   };
 };

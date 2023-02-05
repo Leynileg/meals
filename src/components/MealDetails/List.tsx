@@ -1,4 +1,4 @@
-import { dp } from "@services/Dp";
+import { dp } from "services/Dp";
 import React from "react";
 import { View } from "react-native";
 import styled from "styled-components/native";

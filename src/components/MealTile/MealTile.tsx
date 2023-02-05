@@ -1,9 +1,9 @@
 import { View } from "react-native";
 import { useTheme } from "styled-components/native";
 
-import { Meal } from "@typings/meals";
+import { Meal } from "typings/meals";
 
-import { MealBaseInfo } from "@components/MealBaseInfo";
+import { MealBaseInfo } from "components/MealBaseInfo";
 
 import { Container, Button, MealImage, Title, styles } from "./MealTile.styles";
 

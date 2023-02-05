@@ -1,7 +1,7 @@
 import { Platform, StyleSheet } from "react-native";
 import styled from "styled-components/native";
 
-import { dp } from "@services/Dp";
+import { dp } from "services/Dp";
 
 const Container = styled.View`
   flex: 1;
@@ -38,11 +38,11 @@ const Title = styled.Text`
 
 const styles = StyleSheet.create({
   buttonPressed: {
-    opacity: 0.75
+    opacity: 0.75,
   },
   baseInfo: {
-    fontWeight: "700"
-  }
+    fontWeight: "700",
+  },
 });
 
 export { Container, Button, MealImage, Title, styles };

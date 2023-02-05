@@ -2,8 +2,8 @@ import { createAsyncThunk } from "@reduxjs/toolkit";
 
 import { getFavoritesList } from "@controllers/favorites";
 
-import { Meal } from "@typings/meals";
-import { RootState } from "@typings/redux";
+import { Meal } from "typings/meals";
+import { RootState } from "typings/redux";
 
 import { getFavoritesIds } from "./favorites.selectors";
 

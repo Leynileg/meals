@@ -1,7 +1,4 @@
-import type { RouteProp } from "@react-navigation/native";
-import type { NativeStackNavigationProp } from "@react-navigation/native-stack";
-
-import { STACK_SCREEN_NAME, TAB_SCREEN_NAME } from "@consts/navigation";
+import { TAB_SCREEN_NAME } from "consts/navigation";
 
 import { RootStackParamList } from "./navigation.stack";
 

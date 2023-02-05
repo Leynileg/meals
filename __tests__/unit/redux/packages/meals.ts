@@ -1,13 +1,13 @@
 import { CATEGORIES, MEALS } from "@data/dummy-data";
 
-import { store } from "@store/store";
+import { store } from "store/store";
 import {
   fetchMeals,
   getCategoryMeals,
   getMealById,
   initialState,
   resetState,
-} from "@store/meals";
+} from "store/meals";
 
 const dispatch = store.dispatch;
 

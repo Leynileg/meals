@@ -1,4 +1,4 @@
-import { Meal } from "@typings/meals";
+import { Meal } from "typings/meals";
 
 interface MealsState {
   mealsPerCategory: {

@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-import { REDUX_SLICE } from "@consts/reduxSlices";
+import { REDUX_SLICE } from "consts/reduxSlices";
 
 import { CategoriesState } from "./categories.typings";
 import { fetchCategories } from "./categories.thunks";

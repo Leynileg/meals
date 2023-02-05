@@ -1,12 +1,12 @@
-import { store } from "@store/store";
+import { store } from "store/store";
 import {
   initialState,
   fetchCategories,
   resetState,
   getCategories,
   getCategoryById,
-} from "@store/categories";
-import { Dispatch } from "@typings/redux";
+} from "store/categories";
+import { Dispatch } from "typings/redux";
 import { CATEGORIES } from "@data/dummy-data";
 
 const dispatch = store.dispatch;

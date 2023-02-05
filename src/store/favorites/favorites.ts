@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-import { REDUX_SLICE } from "@consts/reduxSlices";
+import { REDUX_SLICE } from "consts/reduxSlices";
 
 import { AddFavoritePayload, FavoritesState } from "./favorites.typings";
 import { fetchFavorites } from "./favorites.thunks";

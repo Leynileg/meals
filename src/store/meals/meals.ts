@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-import { REDUX_SLICE } from "@consts/reduxSlices";
+import { REDUX_SLICE } from "consts/reduxSlices";
 
 import { MealsState } from "./meals.typings";
 import { fetchMeals } from "./meals.thunks";

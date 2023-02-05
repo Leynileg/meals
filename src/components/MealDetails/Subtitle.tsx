@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components/native";
 
-import { dp } from "@services/Dp";
+import { dp } from "services/Dp";
 
 interface Props {
   children: React.ReactNode;

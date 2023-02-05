@@ -1,4 +1,4 @@
-import { Category } from "@typings/categories";
+import { Category } from "typings/categories";
 
 interface CategoriesState {
   categoriesList: Category[];

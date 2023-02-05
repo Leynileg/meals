@@ -1,5 +1,5 @@
 import { PayloadAction } from "@reduxjs/toolkit";
-import { Meal } from "@typings/meals";
+import { Meal } from "typings/meals";
 
 interface FavoritesState {
   favoritesIdsList: string[];
