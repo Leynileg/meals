@@ -48,10 +48,7 @@ const Navigation: React.FC = () => {
           component={MealDetails}
           options={{
             presentation: "modal",
-            headerTintColor: theme.colors.dark,
-            headerStyle: {
-              backgroundColor: theme.colors.yellow
-            }
+            headerTintColor: theme.colors.dark
           }}
         />
       </Stack.Navigator>

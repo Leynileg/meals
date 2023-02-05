@@ -29,9 +29,13 @@ const Favorites: React.FC = () => {
   return (
     <Container>
       <FlatList
+        ListHeaderComponentStyle={{ elevation: 0.1, zIndex: 1 }}
         style={{ width: "100%" }}
         data={favoriteMeals}
+        extraData={favoriteMeals}
         keyExtractor={item => item.id}
+        numColumns={1}
+        ItemSeparatorComponent={() => <Divider />}
         renderItem={({ item }) => (
           <MealTile
             {...item}
@@ -54,4 +58,8 @@ const Container = styled.View`
   align-items: center;
   justify-content: center;
   padding-top: ${props => props.theme.margins.base_x3};
+`;
+
+const Divider = styled.View`
+  height: 10px;
 `;

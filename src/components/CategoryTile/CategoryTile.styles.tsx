@@ -31,7 +31,7 @@ const InnerContainer = styled.View<{ background: string }>`
 `;
 
 const Title = styled.Text`
-  font-size: ${props => props.theme.fonts.sizes.base_x2};
+  font-size: ${props => props.theme.fonts.sizes.xl};
   font-weight: ${props => props.theme.fonts.weights.bold};
 `;
 

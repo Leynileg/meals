@@ -1,7 +1,7 @@
 import React from "react";
 import { AntDesign } from "@expo/vector-icons";
 import { StyleSheet } from "react-native";
-import styled from "styled-components/native";
+import styled, { useTheme } from "styled-components/native";
 
 interface Props {
   icon: keyof typeof AntDesign.glyphMap;
@@ -10,12 +10,18 @@ interface Props {
 }
 
 const IconButton: React.FC<Props> = props => {
+  const theme = useTheme();
+
   return (
     <Button
       onPress={props.onPress}
       style={({ pressed }) => pressed && styles.pressed}
     >
-      <AntDesign name={props.icon} size={24} color={props.color} />
+      <AntDesign
+        name={props.icon}
+        size={theme.icons.sizes.base_x3}
+        color={props.color}
+      />
     </Button>
   );
 };

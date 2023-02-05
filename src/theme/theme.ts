@@ -5,13 +5,13 @@ import { sp } from "@services/Sp";
 
 const theme: DefaultTheme = {
   margins: {
-    half: dp(4),
-    base: dp(8),
-    base_x2: dp(16),
-    base_x3: dp(24),
-    base_x4: dp(32),
-    base_x5: dp(40),
-    base_x6: dp(48)
+    half: dp(2),
+    base: dp(4),
+    base_x2: dp(8),
+    base_x3: dp(16),
+    base_x4: dp(24),
+    base_x5: dp(32),
+    base_x6: dp(40)
   },
   colors: {
     orange: "#ff724c",
@@ -27,11 +27,12 @@ const theme: DefaultTheme = {
       bold: 700
     },
     sizes: {
-      half: sp(8),
+      xs: sp(12),
+      sm: sp(14),
       base: sp(16),
-      base_x2: sp(24),
-      base_x3: sp(32),
-      base_x4: sp(40)
+      lg: sp(18),
+      xl: sp(20),
+      xl_2: sp(24)
     }
   },
   icons: {
@@ -43,11 +44,11 @@ const theme: DefaultTheme = {
   },
   borders: {
     radius: {
-      half: dp(4),
-      base: dp(8),
-      base_x2: dp(16),
-      base_x3: dp(24),
-      base_x4: dp(32)
+      half: dp(2),
+      base: dp(4),
+      base_x2: dp(8),
+      base_x3: dp(16),
+      base_x4: dp(24)
     }
   }
 };

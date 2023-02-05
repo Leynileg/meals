@@ -29,7 +29,6 @@ const MealTile: React.FC<Props> = props => {
           affordability={props.affordability}
           complexity={props.complexity}
           duration={props.duration}
-          textStyle={styles.baseInfo}
         />
       </Button>
     </Container>

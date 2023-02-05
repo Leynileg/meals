@@ -18,7 +18,7 @@ const Subtitle: React.FC<Props> = props => {
 export { Subtitle };
 
 const SubtitleContainer = styled.View`
-  margin-horizontal: ${props => props.theme.margins.base};
+  margin-bottom: ${props => props.theme.margins.base_x2};
   margin-vertical: ${props => props.theme.margins.base_x2};
   padding: ${props => props.theme.margins.half};
   border-bottom-color: ${props => props.theme.colors.orange};
@@ -26,8 +26,8 @@ const SubtitleContainer = styled.View`
 `;
 
 const SubTitleText = styled.Text`
+  padding-bottom: ${props => props.theme.margins.half};
   font-size: ${props => props.theme.fonts.sizes.base};
   font-weight: ${props => props.theme.fonts.weights.bold};
   color: ${props => props.theme.colors.orange};
-  text-align: center;
 `;

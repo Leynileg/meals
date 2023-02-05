@@ -44,10 +44,6 @@ const MealDetails: React.FC = () => {
 
   const isMealFavorite = userFavoritesIds.includes(mealId);
 
-  const textStyle = {
-    color: theme.colors.dark
-  };
-
   const handleStarPress = debounce(async () => {
     if (isMealFavorite) {
       await dispatch(removeFavorite({ mealId }));
@@ -57,7 +53,6 @@ const MealDetails: React.FC = () => {
       Toast.show("Added to favorites");
     }
 
-    // to imitate getting a data from server
     dispatch(fetchFavorites());
   }, 300);
 
@@ -67,7 +62,7 @@ const MealDetails: React.FC = () => {
       headerRight: () => (
         <IconButton
           icon={isMealFavorite ? "star" : "staro"}
-          color={theme.colors.light}
+          color={theme.colors.dark}
           onPress={handleStarPress}
         />
       )
@@ -84,7 +79,6 @@ const MealDetails: React.FC = () => {
           affordability={selectedMeal.affordability}
           complexity={selectedMeal.complexity}
           duration={selectedMeal.duration}
-          textStyle={textStyle}
         />
         <OuterListContainer>
           <ListContainer>

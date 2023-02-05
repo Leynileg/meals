@@ -15,6 +15,10 @@ import { fetchCategories, getCategories } from "@store/categories";
 
 import { Loading } from "@components/Loading";
 
+interface ListItem {
+  item: Category;
+}
+
 const Categories: React.FC = () => {
   const navigation = useNavigation<CategoriesNavigation>();
   const dispatch = useAppDispatch();
@@ -36,7 +40,7 @@ const Categories: React.FC = () => {
       <FlatList
         data={categories}
         numColumns={2}
-        renderItem={({ item }: { item: Category }) => (
+        renderItem={({ item }: ListItem) => (
           <CategoryTile
             key={item.id}
             color={item.color}
@@ -59,5 +63,7 @@ export { Categories };
 const Container = styled.View`
   flex: 1;
   padding-top: ${props =>
-    Platform.OS === "android" ? props.theme.margins.base_x3 : 0};
+    Platform.OS === "android"
+      ? props.theme.margins.base_x3
+      : props.theme.margins.base};
 `;

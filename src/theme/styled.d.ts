@@ -25,11 +25,12 @@ declare module "styled-components/native" {
         bold: number;
       };
       sizes: {
-        half: string;
+        xs: string;
+        sm: string;
         base: string;
-        base_x2: string;
-        base_x3: string;
-        base_x4: string;
+        lg: string;
+        xl: string;
+        xl_2: string;
       };
     };
     icons: {

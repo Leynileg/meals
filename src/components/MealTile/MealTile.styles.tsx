@@ -17,19 +17,22 @@ const Container = styled.View`
 
 const Button = styled.Pressable`
   flex: 1;
+  justify-content: center;
 `;
 
 const MealImage = styled.Image`
+  flex: 1;
   width: 100%;
-  height: ${dp(100)};
+  height: ${dp(80)};
   border-top-left-radius: ${props => props.theme.borders.radius.base};
   border-top-right-radius: ${props => props.theme.borders.radius.base};
 `;
 
 const Title = styled.Text`
+  flex: 1;
   font-weight: ${props => props.theme.fonts.weights.bold};
   text-align: center;
-  font-size: ${props => props.theme.fonts.sizes.base};
+  font-size: ${props => props.theme.fonts.sizes.xl};
   margin: ${props => props.theme.margins.base};
 `;
 
@@ -38,7 +41,6 @@ const styles = StyleSheet.create({
     opacity: 0.75
   },
   baseInfo: {
-    marginBottom: 8,
     fontWeight: "700"
   }
 });
