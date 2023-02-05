@@ -1,4 +1,5 @@
 import { PayloadAction } from "@reduxjs/toolkit";
+
 import { Meal } from "typings/meals";
 
 interface FavoritesState {

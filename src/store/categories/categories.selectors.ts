@@ -1,8 +1,17 @@
+import { createSelector } from "@reduxjs/toolkit";
+
 import { RootState } from "typings/redux";
 
-const getCategories = (state: RootState) => state.categories.categoriesList;
+const getCategoriesState = (state: RootState) => state.categories;
 
-const getCategoryById = (state: RootState, categoryId: string) =>
-  state.categories.categoriesList.find(el => el.id === categoryId);
+const getCategories = createSelector(
+  getCategoriesState,
+  state => state.categoriesList,
+);
+
+const getCategoryById = createSelector(
+  [getCategories, (_, id: string) => id],
+  (categories, categoryId) => categories.find(el => el.id === categoryId),
+);
 
 export { getCategories, getCategoryById };

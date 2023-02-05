@@ -1,6 +1,7 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 
 import { getMealsForCategoryList } from "@controllers/meals";
+
 import { Meal } from "typings/meals";
 
 const FETCH_MEALS = "meals/fetch_meals";

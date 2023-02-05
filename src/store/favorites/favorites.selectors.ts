@@ -1,7 +1,17 @@
+import { createSelector } from "@reduxjs/toolkit";
+
 import { RootState } from "typings/redux";
 
-const getFavoritesIds = (state: RootState) => state.favorites.favoritesIdsList;
+const getFavoritesState = (state: RootState) => state.favorites;
 
-const getFavorites = (state: RootState) => state.favorites.favoritesList;
+const getFavoritesIds = createSelector(
+  getFavoritesState,
+  state => state.favoritesIdsList,
+);
+
+const getFavorites = createSelector(
+  getFavoritesState,
+  state => state.favoritesList,
+);
 
 export { getFavorites, getFavoritesIds };
