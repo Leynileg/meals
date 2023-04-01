@@ -1,9 +1,7 @@
-import type { DefaultTheme } from "styled-components/native";
-
 import { dp } from "services/Dp";
 import { sp } from "services/Sp";
 
-const theme: DefaultTheme = {
+const theme = {
   margins: {
     half: dp(2),
     base: dp(4),
