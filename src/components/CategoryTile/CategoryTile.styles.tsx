@@ -1,12 +1,12 @@
 import { Platform, StyleSheet } from "react-native";
 import styled from "styled-components/native";
 
-import { dp } from "services/Dp";
+import { moderateScale } from "services/scale";
 
 const Container = styled.View`
   flex: 1;
   margin: ${props => props.theme.margins.half};
-  height: ${dp(90)};
+  height: ${moderateScale(200)};
   overflow: ${Platform.OS === "android" ? "hidden" : "visible"};
   elevation: 4;
   background-color: ${props => props.theme.colors.light};

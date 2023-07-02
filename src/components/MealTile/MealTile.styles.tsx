@@ -1,7 +1,7 @@
 import { Platform, StyleSheet } from "react-native";
 import styled from "styled-components/native";
 
-import { dp } from "services/Dp";
+import { scale } from "services/scale";
 
 const Container = styled.View`
   flex: 1;
@@ -23,7 +23,7 @@ const Button = styled.Pressable`
 const MealImage = styled.Image`
   flex: 1;
   width: 100%;
-  height: ${dp(80)};
+  height: ${scale(140)};
   border-top-left-radius: ${props => props.theme.borders.radius.base};
   border-top-right-radius: ${props => props.theme.borders.radius.base};
 `;

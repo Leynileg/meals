@@ -1,6 +1,6 @@
 import { MEALS } from "@data/dummy-data";
 
-import { getRandomNumber } from "services/GetRandomNumber";
+import { getRandomNumber } from "services/getRandomNumber";
 import { Meal } from "typings/meals";
 
 type Result = Promise<{

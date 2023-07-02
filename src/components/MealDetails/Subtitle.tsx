@@ -1,8 +1,6 @@
 import React from "react";
 import styled from "styled-components/native";
 
-import { dp } from "services/Dp";
-
 interface Props {
   children: React.ReactNode;
 }
@@ -22,7 +20,7 @@ const SubtitleContainer = styled.View`
   margin-vertical: ${props => props.theme.margins.base_x2};
   padding: ${props => props.theme.margins.half};
   border-bottom-color: ${props => props.theme.colors.orange};
-  border-bottom-width: ${dp(1)};
+  border-bottom-width: 1px;
 `;
 
 const SubTitleText = styled.Text`

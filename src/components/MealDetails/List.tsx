@@ -1,4 +1,3 @@
-import { dp } from "services/Dp";
 import React from "react";
 import { View } from "react-native";
 import styled from "styled-components/native";
@@ -26,7 +25,7 @@ const ListItem = styled.View`
   margin-bottom: ${props => props.theme.margins.base_x2};
   margin-horizontal: ${props => props.theme.margins.base};
   border-bottom-color: ${props => props.theme.colors.dark};
-  border-bottom-width: ${dp(0.5)};
+  border-bottom-width: 0.5px;
 `;
 
 const ItemText = styled.Text`

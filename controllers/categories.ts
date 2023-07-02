@@ -1,5 +1,5 @@
 import { CATEGORIES } from "@data/dummy-data";
-import { getRandomNumber } from "services/GetRandomNumber";
+import { getRandomNumber } from "services/getRandomNumber";
 import { Category } from "typings/categories";
 
 type Result = Promise<{

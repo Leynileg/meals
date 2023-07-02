@@ -1,15 +1,14 @@
-import { dp } from "services/Dp";
-import { sp } from "services/Sp";
+import { moderateScale } from "services/scale";
 
 const theme = {
   margins: {
-    half: dp(2),
-    base: dp(4),
-    base_x2: dp(8),
-    base_x3: dp(16),
-    base_x4: dp(24),
-    base_x5: dp(32),
-    base_x6: dp(40),
+    half: moderateScale(4),
+    base: moderateScale(8),
+    base_x2: moderateScale(16),
+    base_x3: moderateScale(24),
+    base_x4: moderateScale(32),
+    base_x5: moderateScale(40),
+    base_x6: moderateScale(48),
   },
   colors: {
     orange: "#ff724c",
@@ -25,12 +24,12 @@ const theme = {
       bold: 700,
     },
     sizes: {
-      xs: sp(12),
-      sm: sp(14),
-      base: sp(16),
-      lg: sp(18),
-      xl: sp(20),
-      xl_2: sp(24),
+      xs: moderateScale(12),
+      sm: moderateScale(14),
+      base: moderateScale(16),
+      lg: moderateScale(18),
+      xl: moderateScale(20),
+      xl_2: moderateScale(24),
     },
   },
   icons: {
@@ -42,11 +41,11 @@ const theme = {
   },
   borders: {
     radius: {
-      half: dp(2),
-      base: dp(4),
-      base_x2: dp(8),
-      base_x3: dp(16),
-      base_x4: dp(24),
+      half: moderateScale(2),
+      base: moderateScale(4),
+      base_x2: moderateScale(8),
+      base_x3: moderateScale(16),
+      base_x4: moderateScale(24),
     },
   },
 };

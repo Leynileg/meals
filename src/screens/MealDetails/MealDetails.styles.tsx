@@ -1,16 +1,17 @@
 import styled from "styled-components/native";
 
-import { dp } from "services/Dp";
+import { scale } from "services/scale";
 
 const Image = styled.Image`
   width: 100%;
-  height: ${dp(100)};
+  height: ${scale(150)};
 `;
 
 const Title = styled.Text`
   margin: ${props => props.theme.margins.base};
   color: ${props => props.theme.colors.dark};
-  font-size: ${props => props.theme.fonts.sizes.lg};
+  /* font-size: ${props => props.theme.fonts.sizes.lg}; */
+  font-size: 30px;
   font-weight: ${props => props.theme.fonts.weights.bold};
   text-align: center;
 `;
